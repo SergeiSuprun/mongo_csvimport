@@ -5,7 +5,6 @@
 #include <boost/program_options.hpp>
 #include <boost/tokenizer.hpp>
 #include <boost/foreach.hpp>
-#include <boost/multiprecision/cpp_int.hpp>
 
 #include "csv.h"
 
@@ -20,7 +19,6 @@
 
 using namespace std;
 using namespace boost::program_options;
-using namespace boost::multiprecision;
 using bsoncxx::builder::basic::kvp;
 
 typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
