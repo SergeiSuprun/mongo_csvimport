@@ -8,7 +8,7 @@ For advanced usage see: mongo_csvimport --help
   
 # target platform
 Any platform. 
-Project file for QT Crater provided.
+Project file for QT Creator provided.
 
 # dependencies
 - pthread
