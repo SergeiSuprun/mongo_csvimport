@@ -48,7 +48,7 @@ int main(int ac, char ** av) {
                 ("database,b",   value(&database_name  )->required(),         "database name"                   )
                 ("collection,c", value(&collection_name)->required(),         "database collection name"        )
                 ("input,i",      value(&input_file     )->required(),         "input csv file"                  )
-                ("separator,s",  value(&csv_separator  )->default_value(';'), "CSV column separator (';', ',' or TAB)")
+                ("separator,s",  value(&csv_separator  )->default_value(';'), "CSV column separator (';' or ',')")
                 ("lines,l",      value(&lines_for_skip )->default_value(0),   "number of lines for skip"        )
                 ("names,n",      value(&header_str     )->required(),         "comma separated column names"    )
                 ("types,t",      value(&types_str      )->required(),         "comma separated types of columns (i - int, S - string, F - float, I - int64)")
@@ -117,12 +117,6 @@ int main(int ac, char ** av) {
                     io::detail::parse_line<
                             io::trim_chars<' ', '\t'>,
                             io::no_quote_escape<';'>
-                            >(line, pcells, col_order);
-                    break;
-                case '\t':
-                    io::detail::parse_line<
-                            io::trim_chars<' ', '\t'>,
-                            io::no_quote_escape<'\t'>
                             >(line, pcells, col_order);
                     break;
                 default:
