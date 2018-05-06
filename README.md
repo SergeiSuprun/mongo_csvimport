@@ -2,7 +2,9 @@
 Fast import large CSV documents into mongodb
 
 # usage example
-mongo_csvimport -d <count of document for "insert_many"> -u <mongodb connection URI> -b <database name> -c <collection name> -i <CSV file name> -n <comma separated columns name> -t <commas eparated columns types>
+General usage: mongo_csvimport -d < count of document for "insert_many" > -u < mongodb connection URI > -b < database name > -c < collection name > -i < CSV file name > -n < comma separated columns names > -t < comma separated columns types >
+
+For advanced usage see: mongo_csvimport --help
   
 # target platform
 Any platform. 
